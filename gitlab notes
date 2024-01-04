@@ -116,6 +116,7 @@ stages:
 artifacts:
 before_script:
 after_script:
+only: for deploying in selected branch
 ------------------------
 
 Under Operate -- we can create environment

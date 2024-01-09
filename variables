@@ -1,3 +1,10 @@
+while we want to pass the variable into gitlab,
+
+we can do it in two ways --- just variable or pass a file variable
+
+
+
+
 pre defined variables
 demo_job:
   script:

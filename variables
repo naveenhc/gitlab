@@ -1,7 +1,9 @@
 while we want to pass the variable into gitlab,
 
 we can do it in two ways --- just variable or pass a file variable
-
+with two options-
+1. protect variable -- this will help to restrict variable to a particular branch
+2. mask variable --- it will not be seen in logs
 
 
 

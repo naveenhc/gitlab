@@ -1,0 +1,41 @@
+pre defined variables
+demo_job:
+  script:
+    - echo $CI_COMMIT_MESSAGE
+    - echo $CI_JOB_NAME
+
+--
+#global variables
+variables:
+    name: 'John'
+    message: 'How are you?'
+
+display_message:
+    variables:
+        name: 'Mark'
+    script:
+        - echo "Hello $name, $message"
+---
+
+secret variable
+
+push_image:
+    script:
+        - docker login -u $USERNAME -p $PASSWORD
+        - docker tag pyapp:latest $USERNAME/mypyapp:latest
+        - docker push $USERNAME/mypyapp:latest
+    tags: 
+        - localshell
+        - localrunner
+
+
+
+---
+push_image:
+    script:
+        - docker login -u $USERNAME -p $PASSWORD
+        - docker tag pyapp:latest $USERNAME/mypyapp:latest
+        - docker push $USERNAME/mypyapp:latest
+    tags: 
+        - localshell
+        - localrunner
